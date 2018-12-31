@@ -1,34 +1,40 @@
 " .vimrc
+" Author: Adrian Kirk
+"
 
-set nocompatible                                        " Use Vim settings ratther than Vi settings.
+" Configure windows plugin path to .vim
+if has("win32") || has("win64")
+    set runtimepath^=~/.vim
+    set runtimepath+=~/.vim/after
+endif
 
-" Pathogen {{{
-execute pathogen#infect()
-" }}}
 
-" Colors {{{
+set nocompatible                    " use Vim settings, not Vi settings
+
+" -------------------------------------------------------------------------------
+" COLORS
+" -------------------------------------------------------------------------------
 syntax on
 color dracula
 colorscheme default
 set background=dark
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-" }}}
-" Tabs, Spaces and indentation {{{
-set nowrap                                              " no line wrap
-set tabstop=4                                           " number of visual spaces per TAB
-set softtabstop=4                                       " numer of spaces in tab when editing
-set expandtab                                           " tabs are spaces
-set shiftwidth=4                                        " number of spaces that correspond to a single tab
-set smarttab                                            " tab to the next indent
-set autoindent                                          " new lines inherit indentation of the previous lines
-filetype plugin indent on                               " Smart auto indentation
-" match ErrorMsg '\s\+$'                                  " Highlight trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e                      " remove trailing whitespaces automatically
-" }}}
+
+
+" -------------------------------------------------------------------------------
+" TABS, SPACES, INDENTATION
+" -------------------------------------------------------------------------------
+set nowrap                          " no line wrap
+set tabstop=4                       " number of visual spaces per TAB
+set softtabstop=4                   " numer of spaces in tab when editing
+set expandtab                       " tabs are spaces
+set shiftwidth=4                    " number of spaces for a single tab
+set smarttab                        " tab to the next indent
+set autoindent                      " new lines inherit indentation
+filetype plugin indent on           " smart auto indentation
+match ErrorMsg '\s\+$'              " Highlight trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e  " remove trailing whitespaces automatically
+
+
 " Configuration {{{
 set title                                               " set the window title reflecting current file
 set number                                              " show line numbers
@@ -51,12 +57,14 @@ set tabpagemax=40                                       " maximum number of tab 
 set exrc                                                " project specific .vimrc
 "}}}
 
-" Swap and Backup {{{
-set directory=$USERPROFILE/vimfiles/swp//
+" -------------------------------------------------------------------------------
+" SWAP AND BACKUP
+" -------------------------------------------------------------------------------
+set directory=$USERPROFILE/.vimfiles/swp//
 set nobackup
 set nowb
 
-" }}}
+
 " Searching {{{
 set hlsearch                                            " Highlight searsh results
 set incsearch                                           " Set incremental search
