@@ -15,8 +15,7 @@ set nocompatible                    " use Vim settings, not Vi settings
 " COLORS
 " ------------------------------------------------------------------------------
 syntax on
-color dracula
-colorscheme default
+filetype on                         " syntax highlight based on file extension
 set background=dark
 
 
@@ -53,9 +52,8 @@ set tabpagemax=40                   " maximum number of tab pages
 "set cursorline                     " highlight the current line
 "highlight CursorLine ctermbg=darkgrey
 set exrc                            " project specific .vimrc
-filetype on                         " syntax highlight based on file extension
 
-" DISABLED, vim very slow over RDP with relative line numbers
+" NOTE: very slow in ConsoleZ and RDP using relative line numbers
 " set relativenumber                " show relative line numbers
 " augroup toggle_relative_number    " auto toggle absolute/relative for INS/NOR
 " autocmd InsertEnter * :setlocal norelativenumber | set number
@@ -65,7 +63,7 @@ filetype on                         " syntax highlight based on file extension
 " -------------------------------------------------------------------------------
 " SWAP AND BACKUP
 " -------------------------------------------------------------------------------
-set directory=$USERPROFILE/.vimfiles/swp//
+set directory=$HOME/.vimfiles/swp//
 set nobackup
 set nowb
 
@@ -86,13 +84,12 @@ noremap <silent> <ESC> :nohlsearch<BAR>:echo<CR>
 set encoding=utf-8                  " unicode
 set scrolloff=3                     " lines to keep above and below the cursor
 set sidescrolloff=5                 " columns to keep left and right of the csr
-syntax enable                       " enable syntax processing
 
 
 " -------------------------------------------------------------------------------
 " MAPPING
 " -------------------------------------------------------------------------------
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 " move between buffers
 map <C-J> <ESC>:bprev<CR>
