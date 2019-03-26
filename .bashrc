@@ -129,6 +129,5 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\n\$ '
 fi
 
-
-# ls color definitions
-LS_COLORS=$LS_COLORS:'ex=0=94:ow=1;94:' ; export LS_COLORS
+# editor for psql
+EDITOR=vi
