@@ -54,10 +54,10 @@ set tabpagemax=40                   " maximum number of tab pages
 set exrc                            " project specific .vimrc
 
 " NOTE: very slow in ConsoleZ and RDP using relative line numbers
-" set relativenumber                " show relative line numbers
-" augroup toggle_relative_number    " auto toggle absolute/relative for INS/NOR
-" autocmd InsertEnter * :setlocal norelativenumber | set number
-" autocmd InsertLeave * :setlocal relativenumber
+set relativenumber                  " show relative line numbers
+augroup toggle_relative_number      " auto toggle absolute/relative for INS/NOR
+autocmd InsertEnter * :setlocal norelativenumber | set number
+autocmd InsertLeave * :setlocal relativenumber
 
 
 " -------------------------------------------------------------------------------
