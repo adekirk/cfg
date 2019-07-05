@@ -154,8 +154,8 @@ filetype plugin on
 " -------------------------------------------------------------------------------
 " PLUGIN: AIRLINE
 " -------------------------------------------------------------------------------
-"let g:airline_theme = 'wombat'
-"let g:airline#extensions#tabline#enabled = 0
-"let g:airline#extensions#branch#enabled = 1
-"let g:airline_powerline_fonts = 1
+let g:airline_theme = "luna"
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts = 1
 "let g:airline_section_z = airline#section#create_right(['%l','%c'])
