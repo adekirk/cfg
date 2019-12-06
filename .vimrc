@@ -11,6 +11,7 @@ endif
 
 
 set nocompatible                    " use Vim settings, not Vi settings
+let mapleader = ","                 " use , (comma) as the leader key
 
 " ------------------------------------------------------------------------------
 " COLORS
@@ -103,8 +104,6 @@ map <C-K> <ESC>:bnext<CR>
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-
-let mapleader = ","
 map <leader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
 
 
