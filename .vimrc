@@ -77,7 +77,10 @@ set incsearch                       " incremental search
 set ignorecase                      " ignore case when searching
 
 " ESC hides search highlight
-noremap <silent> <ESC> :nohlsearch<BAR>:echo<CR>
+" noremap <silent> <ESC> :nohlsearch<BAR>:echo<CR>
+" Disabled mapping ESC to hide search highlight. It was causing issues on OSX
+" always starting in REPLACE mode.
+nnoremap <leader><space> :noh<cr>   " map <leader><space> to hide search hilight
 
 " -------------------------------------------------------------------------------
 " RENDERING
@@ -101,7 +104,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 
-let mapleader = "\<space>"
+let mapleader = ","
 map <leader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
 
 
