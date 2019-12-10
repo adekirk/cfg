@@ -20,7 +20,7 @@ let mapleader = ","                 " use , (comma) as the leader key
 syntax on
 filetype on                         " syntax highlight based on file extension
 set background=dark
-
+colorscheme solarized8_high
 
 " ------------------------------------------------------------------------------
 " TABS, SPACES, INDENTATION
