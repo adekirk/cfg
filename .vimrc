@@ -78,6 +78,8 @@ set colorcolumn=85
 set directory=$HOME/.vimfiles/swp//
 set nobackup
 set nowb
+set undofile                        " maintain undo history between files
+set undodir=$HOME/.vimfiles/undo
 
 
 " ------------------------------------------------------------------------------
