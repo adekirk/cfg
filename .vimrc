@@ -20,7 +20,7 @@ let mapleader = ","                 " use , (comma) as the leader key
 syntax on
 filetype on                         " syntax highlight based on file extension
 set background=dark
-colorscheme solarized8_high
+colorscheme nord
 
 " ------------------------------------------------------------------------------
 " TABS, SPACES, INDENTATION
@@ -113,7 +113,7 @@ map <C-J> <ESC>:bprev<CR>
 map <C-K> <ESC>:bnext<CR>
 
 
-map <leader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
+map <eader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
 
 nnoremap <space> za
 
@@ -172,6 +172,6 @@ filetype plugin on
 " ------------------------------------------------------------------------------
 " PLUGIN: AIRLINE
 " ------------------------------------------------------------------------------
-let g:airline_theme = "molokai"
+let g:airline_theme = "nord"
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#branch#enabled = 1
