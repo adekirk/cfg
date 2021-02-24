@@ -12,7 +12,7 @@ endif
 
 set nocompatible                    " use Vim settings, not Vi settings
 set modelines=0                     "
-let mapleader = ","                 " use , (comma) as the leader key
+let mapleader=","                   " use , (comma) as the leader key
 
 " ------------------------------------------------------------------------------
 " COLORS
@@ -113,7 +113,7 @@ map <C-J> <ESC>:bprev<CR>
 map <C-K> <ESC>:bnext<CR>
 
 
-map <eader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
+map <leader>s :source ~\.vimrc<CR>                      " \s reloads .vimrc
 
 nnoremap <space> za
 
