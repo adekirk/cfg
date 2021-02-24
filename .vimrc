@@ -20,7 +20,18 @@ let mapleader=","                   " use , (comma) as the leader key
 syntax on
 filetype on                         " syntax highlight based on file extension
 set background=dark
+
+" ------------------------------------------------------------------------------
+" THEME: NORD
+" ------------------------------------------------------------------------------
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 0
 colorscheme nord
+
+if (has("termguicolors"))
+"  set termguicolors
+endif
 
 " ------------------------------------------------------------------------------
 " TABS, SPACES, INDENTATION
@@ -170,8 +181,8 @@ noremap <Leader>` :call VexToggle("")<CR>
 filetype plugin on
 
 " ------------------------------------------------------------------------------
-" PLUGIN: AIRLINE
+" PLUGIN: LIGHTLINE
 " ------------------------------------------------------------------------------
-let g:airline_theme = "nord"
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#branch#enabled = 1
+let g:lightline = {
+    \ 'colorscheme': 'nord',
+    \ }
