@@ -1,0 +1,2 @@
+editor: vi
+apiEndpoint: http://nas.local:3000/api
