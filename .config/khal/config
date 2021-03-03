@@ -1,0 +1,40 @@
+[calendars]
+
+[[home]]
+path = ~/.local/share/vdirsyncer/fastmail/Default
+color = light blue
+priority = 11
+type = calendar
+
+[[work]]
+path = ~/.local/share/vdirsyncer/fastmail/18018703-88bc-4164-9957-e4a328ef55e4
+color = light red
+type = calendar
+
+[[activity]]
+path = ~/.local/share/vdirsyncer/fastmail/C2DCB8BD-24F8-4D45-A4E8-228123B9CCEB
+color = light magenta
+type = calendar
+
+[[holidays]]
+path = ~/.local/share/vdirsyncer/fastmail/2403a3e9-edd2-48ed-b713-1d069e2b4da4
+color = light green
+type = calendar
+
+[[private]]
+path = /Users/adrian/.local/share/khal/calendars/private
+type = calendar
+
+[default]
+default_calendar = home
+highlight_event_days = true
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+
+[view]
+bold_for_light_color = false

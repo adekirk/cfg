@@ -133,8 +133,8 @@ nnoremap <space> za
 " ------------------------------------------------------------------------------
 map <C-h> <C-w>h                    " switch window left
 map <C-l> <C-w>l                    " switch window right
-map <C-j> <C-w>j                    " switch window down
-map <C-k> <C-w>k                    " switch window up
+" map <C-j> <C-w>j                    " switch window down
+" map <C-k> <C-w>k                    " switch window up
 nnoremap <leader>w <C-w>v<C-w>l     " new vertical split and switch to it
 
 " ------------------------------------------------------------------------------
