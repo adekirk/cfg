@@ -61,7 +61,7 @@ set noshowmode                      " hide --INS-- in status -> airline
 set backspace=indent,eol,start      " backspacing over intentation, line breaks
 set history=1000                    " set big history of executed commands
 set autoread                        " automatically re-read files if unmodified
-set laststatus=2                    " additional status line for airline
+set laststatus=4                    " additional status line for airline
 set tabpagemax=40                   " maximum number of tab pages
 "set cursorline                     " highlight the current line
 "highlight CursorLine ctermbg=darkgrey
@@ -80,7 +80,7 @@ autocmd InsertLeave * :setlocal relativenumber
 set nowrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 
 " ------------------------------------------------------------------------------
