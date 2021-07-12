@@ -7,4 +7,9 @@
     ci = commit
     st = status
     br = branch
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+    # Logging
+
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10 # Nice pretty log
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short -10
+    last = log -1 HEAD
