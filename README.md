@@ -1,4 +1,4 @@
-# dotfiles: A bare Git repository
+ dotfiles: A bare Git repository
 
 This uses a bare git repository in a _side_ folder. For example $HOME/.cfg
 
@@ -51,3 +51,24 @@ config checkout
 ```
 
 The checkout may fail if there are existing files, just rename them first.
+
+
+# VIM
+
+## Plugins
+
+### NERDTree
+
+```
+git clone https://github.com/preservim/nerdtree.git
+~/.vim/pack/vendor/start/nerdtree
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+```
+
+Keyboard Mapping
+
+```
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+```

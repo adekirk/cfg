@@ -138,51 +138,15 @@ map <C-l> <C-w>l                    " switch window right
 nnoremap <leader>w <C-w>v<C-w>l     " new vertical split and switch to it
 
 " ------------------------------------------------------------------------------
-" NETRW
-" ------------------------------------------------------------------------------
-let g:netrw_liststyle = 1           " Explorer list style = Detailed
-let g:netrw_banner = 1              " Hide banner
-let g:netrw_browse_split = 4        " Load file in split and keep netrw
-let g:netrw_winsize = 33            " 33%
-
-fun! VexToggle(dir)
-    if exists("t:vex_buf_nr")
-        call VexClose()
-    else
-        call VexOpen(a:dir)
-    endif
-endf
-
-fun! VexOpen(dir)
-    let g:netrw_browse_split=4
-    execute "Vexplore " . a:dir
-    let t:vex_buf_nr = bufnr("%")
-endf
-
-fun! VexClose()
-    let cur_win_nr = winnr()
-    let target_nr = (cur_win_nr == 1 ? winnr("#") : cur_win_nr)
-
-    1wincmd w
-    close
-    unlet t:vex_buf_nr
-
-    execute (target_nr - 1) . "wincmd w"
-    "call NormalizeWidths()
-endf
-
-noremap <Leader>` :call VexToggle("")<CR>
-
-
-
-" ------------------------------------------------------------------------------
 " PLUGIN: CSV
 " ------------------------------------------------------------------------------
+
 filetype plugin on
 
 " ------------------------------------------------------------------------------
 " PLUGIN: LIGHTLINE
 " ------------------------------------------------------------------------------
+
 let g:lightline = {
     \ 'colorscheme': 'nord',
     \ 'active': {
@@ -193,3 +157,19 @@ let g:lightline = {
     \   'gitbranch': 'gitbranch#name'
     \ },
     \ }
+
+" ------------------------------------------------------------------------------
+" PLUGIN: NERDTree
+" ------------------------------------------------------------------------------
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Close VIM when NERDTree is the last window
+
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+let NERDTreeShowHidden=1            " Show hidden files
+let NERDTreeQuitOnOpen=1            " Close NERDTree after a file is open
