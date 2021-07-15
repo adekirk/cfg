@@ -99,7 +99,7 @@ set incsearch                       " incremental search
 set ignorecase                      " ignore case when searching
 
 " ESC hides search highlight
-" noremap <silent> <ESC> :nohlsearch<BAR>:echo<CR>
+noremap <silent> <ESC> :nohlsearch<BAR>:echo<CR>
 " Disabled mapping ESC to hide search highlight. It was causing issues on OSX
 " always starting in REPLACE mode.
 nnoremap <leader><space> :noh<cr>   " map <leader><space> to hide search hilight
@@ -138,6 +138,9 @@ nnoremap <leader>w <C-w>v<C-w>l     " new vertical split and switch to it
 " ------------------------------------------------------------------------------
 " ABBREVIATIONS
 " ------------------------------------------------------------------------------
+
+"vim
+iabbrev #c " -----------------------------------------------------------------------------<CR><CR><BS><BS>" -----------------------------------------------------------------------------<UP><SPACE>
 
 " ------------------------------------------------------------------------------
 " PLUGIN: CSV
