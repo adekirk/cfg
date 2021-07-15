@@ -55,13 +55,11 @@ set title                           " window title for current file
 set number                          " show line numbers
 set showcmd                         " show incomplete command in bottom bar
 set wildmenu                        " visual autocomplete for command menu
-set lazyredraw                      " only redraw when needed, not in macros
+" set lazyredraw                      " only redraw when needed, not in macros
 set showmatch                       " highlight matching [{()}]
-set noshowmode                      " hide --INS-- in status -> airline
 set backspace=indent,eol,start      " backspacing over intentation, line breaks
 set history=1000                    " set big history of executed commands
 set autoread                        " automatically re-read files if unmodified
-set laststatus=4                    " additional status line for airline
 set tabpagemax=40                   " maximum number of tab pages
 "set cursorline                     " highlight the current line
 "highlight CursorLine ctermbg=darkgrey
@@ -138,6 +136,10 @@ map <C-l> <C-w>l                    " switch window right
 nnoremap <leader>w <C-w>v<C-w>l     " new vertical split and switch to it
 
 " ------------------------------------------------------------------------------
+" ABBREVIATIONS
+" ------------------------------------------------------------------------------
+
+" ------------------------------------------------------------------------------
 " PLUGIN: CSV
 " ------------------------------------------------------------------------------
 
@@ -147,6 +149,8 @@ filetype plugin on
 " PLUGIN: LIGHTLINE
 " ------------------------------------------------------------------------------
 
+set laststatus=2                    " additional status line for airline
+set noshowmode                      " hide --INS-- in status -> airline
 let g:lightline = {
     \ 'colorscheme': 'nord',
     \ 'active': {
@@ -157,7 +161,6 @@ let g:lightline = {
     \   'gitbranch': 'gitbranch#name'
     \ },
     \ }
-
 " ------------------------------------------------------------------------------
 " PLUGIN: NERDTree
 " ------------------------------------------------------------------------------

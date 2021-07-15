@@ -65,6 +65,12 @@ git clone https://github.com/preservim/nerdtree.git
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 ```
 
+### Lightline
+
+```
+git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+```
+
 Keyboard Mapping
 
 ```
