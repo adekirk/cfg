@@ -35,9 +35,15 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet test")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
-                         
+
 # ------------------------------------------------------------------------------
 # OH-MY-POSH
 # ------------------------------------------------------------------------------
 Set-PoshPrompt -Theme ~\.oh-my-posh.omp.json
 
+# ------------------------------------------------------------------------------
+# TERMINAL-ICONS
+#
+# Install: Install-Module -Name Terminal-Icons -Repository PSGallery
+# ------------------------------------------------------------------------------
+Import-Module -Name Terminal-Icons
