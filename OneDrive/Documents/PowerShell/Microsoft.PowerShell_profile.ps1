@@ -18,6 +18,8 @@ if ($host.Name -eq 'ConsoleHost')
     Import-Module PSReadLine
 }
 
+Set-PSReadLineOption -PredictionSource History
+
 Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
                          -BriefDescription BuildCurrentDirectory `
                          -LongDescription "dotnet Build the current directory" `
