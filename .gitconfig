@@ -1,15 +1,73 @@
 [user]
-	name = Adrian
 	email = code@adekirk.co.uk
+	name = Adrian Kirk
 
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
+# Common
+ci = commit
+co = checkout
+com = checkout master
+cod = checkout develop
+st = status
+br = branch
 
-    # Logging
+f = fetch
 
-    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10 # Nice pretty log
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short -10
-    last = log -1 HEAD
+pom = pull origin master
+pod = pull origin develop
+
+
+# Diff and Merge
+dt = difftool -y
+mt = mergetool -y
+
+# Logging
+l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10 # Nice pretty log
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short -10
+last = log -1 HEAD
+
+out = log origin/master..HEAD --abbrev-commit --pretty=oneline
+lb = log --abbrev-commit --pretty=oneline --no-merges master..HEAD
+unstage = reset HEAD --
+
+
+
+# Submodules
+
+
+
+ec = config --global -e # Edit Config
+cob = checkout -b # Checkout Branch
+cm = !git add -A && git commit -m # Add and commit
+
+save = !git add -A && git commit -m 'SAVEPOINT'
+undo = reset HEAD~1 --mixed
+amend = commit -a --amend
+
+
+[core]
+	excludesfile =
+	autocrlf = true
+
+[diff]
+tool = bc4
+submodule = log
+[difftool "bc4"]
+cmd = 'C:/Program Files/Beyond Compare 4/bcomp.exe' \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+keepBackup = false
+	tool = bc4
+[mergetool "bc4"]
+	cmd = 'C:/Program Files/Beyond Compare 4/bcomp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
