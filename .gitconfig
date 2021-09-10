@@ -47,7 +47,7 @@ amend = commit -a --amend
 
 [core]
 	excludesfile =
-	autocrlf = true
+	autocrlf = input
 
 [diff]
 tool = bc4
