@@ -53,6 +53,40 @@ config checkout
 The checkout may fail if there are existing files, just rename them first.
 
 
+
+# Shell
+
+
+## ZSH
+
+Install with:
+
+```
+sudo apt install zsh
+```
+
+change default shell:
+
+```
+chsh -s $(which zsh)
+```
+
+## OH-MY-ZSH
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## SPACESHIP THEME
+
+```
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+Set ZSH_THEME="spaceship" in your .zshrc.
+
+
+
 # VIM
 
 ## Plugins
@@ -78,3 +112,6 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 ```
+
+
+
